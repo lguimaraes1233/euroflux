@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - EuroFlux</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA;
+            color: #333;
+        }
+        header {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 10%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #087464;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #F3BA1C;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #F3BA1C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-card a:hover {
+            background-color: #d9a317;
+        }
+        .footer {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>EuroFlux - Nossos Produtos</header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="historia.html">História</a>
+        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    </nav>
+    <div class="container">
+        <h2>Nossos Produtos</h2>
+        <div class="grid">
+            <div class="product-card">
+                <img src="produto1.jpg" alt="Lençol de Papel">
+                <h3>Lençol de Papel Descartável</h3>
+                <p>Disponível nos modelos: Ecológico, Branco e Extra Branco.</p>
+                <a href="produto-detalhes.html">Ver Mais</a>
+            </div>
+            <div class="product-card">
+                <img src="produto2.jpg" alt="Máscara Cirúrgica">
+                <h3>Máscara Cirúrgica</h3>
+                <p>Alta proteção e conforto para profissionais de saúde.</p>
+                <a href="produto-detalhes.html">Ver Mais</a>
+            </div>
+            <div class="product-card">
+                <img src="produto3.jpg" alt="Luvas Descartáveis">
+                <h3>Luvas Descartáveis</h3>
+                <p>Segurança e higiene em todos os procedimentos.</p>
+                <a href="produto-detalhes.html">Ver Mais</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p><strong>Telefone:</strong> +55 (41) 3195-4365</p>
+        <p>&copy; 2025 EuroFlux - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

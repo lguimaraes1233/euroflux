@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco - EuroFlux</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA;
+            color: #333;
+        }
+        header {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 10%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #087464;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #F3BA1C;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h2 {
+            color: #087464;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #087464;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input {
+            background: white;
+        }
+        button {
+            background-color: #087464;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #065C50;
+        }
+        footer {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>EuroFlux - Trabalhe Conosco</header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="historia.html">História</a>
+        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    </nav>
+    <div class="container">
+        <h2>Envie seu Currículo</h2>
+        <p>Preencha os campos abaixo e envie seu currículo para fazer parte da nossa equipe.</p>
+        <form action="enviar_curriculo.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="curriculo">Anexe seu Currículo:</label>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit">Enviar Currículo</button>
+        </form>
+    </div>
+    <footer>
+        <p><strong>Telefone:</strong> +55 (41) 3195-4365</p>
+        <p>&copy; 2025 EuroFlux - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

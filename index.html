@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroFlux - Produtos Hospitalares</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA;
+            color: #333;
+        }
+        header {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 10%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #087464;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #F3BA1C;
+        }
+        .banner {
+            background: linear-gradient(rgba(8, 116, 100, 0.6), rgba(8, 116, 100, 0.6)), url('banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 0;
+        }
+        .content-section img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content-text {
+            width: 50%;
+            text-align: left;
+        }
+        .partner-section {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .map-container iframe {
+            width: 80%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-color: #087464;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>EuroFlux - Produtos Hospitalares</header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="historia.html">História</a>
+        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    </nav>
+    <div class="banner">Bem-vindo à EuroFlux</div>
+    <div class="container">
+        <div class="content-section">
+            <div class="content-text">
+                <h2>Engenharia em nosso núcleo</h2>
+                <p>Na EuroFlux, combinamos inovação e tecnologia para fornecer produtos hospitalares da mais alta qualidade.</p>
+            </div>
+            <img src="engenharia.jpg" alt="Engenharia da EuroFlux">
+        </div>
+        <div class="content-section">
+            <img src="maquinario.jpg" alt="Maquinário EuroFlux">
+            <div class="content-text">
+                <h2>Nosso Maquinário</h2>
+                <p>Equipamentos modernos garantem a máxima eficiência na produção e segurança dos nossos produtos.</p>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="content-text">
+                <h2>Sobre nossos Equipamentos</h2>
+                <p>Utilizamos tecnologia de ponta para garantir a qualidade e confiabilidade dos nossos produtos hospitalares.</p>
+            </div>
+            <img src="equipamentos.jpg" alt="Equipamentos Hospitalares">
+        </div>
+    </div>
+    <div class="partner-section">
+        <p>Não somos apenas mais um fornecedor, somos seus parceiros.</p>
+        <p>Executamos a fabricação para que você possa se concentrar na inovação.</p>
+        <p>Contate-nos para saber mais sobre como podemos colaborar.</p>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com.br/maps/embed?pb=!1m18!1m12!1m3!1d3660.4706436118774!2d-49.2576181!3d-25.4515692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4fa6efc3181%3A0x8b0f452491a6f477!2sPUCPR%20-%20Pontif%C3%ADcia%20Universidade%20Cat%C3%B3lica%20do%20Paran%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1710000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="footer">
+        <p><strong>Telefone:</strong> +55 (41) 3195-4365</p>
+        <p>&copy; 2025 EuroFlux - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
