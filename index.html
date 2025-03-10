@@ -27,7 +27,8 @@
             display: flex;
             justify-content: space-between;
             align-items: left;
-            background-color: rgb(246, 255, 249);
+            /* background-color: rgb(246, 255, 249); */
+            background-color: rgb(255, 255, 255);
             /* background-color: rgb(255, 255, 255); */
             padding: 15px 10%;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -177,7 +178,68 @@
         .r {
             padding:10px ;
         }
-    </style>
+        /* Estilo para todos os ícones */
+        .fa {
+            padding: 3px;
+            font-size: 40px; /* Aumente esse valor para aumentar os ícones */
+            width: 60px; /* Ajuste a largura para manter a proporção */
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            /* border-radius: 50%; */
+            color: white;
+
+        }
+        .fa:hover {
+            opacity: 0.7;
+        }
+        /* Cores específicas para cada rede social */
+        .fa-facebook {
+            background: transparent;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: transparent;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: transparent;
+            color: white;
+        }
+
+        /* Efeito de opacidade ao passar o mouse */
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: left; /* ou center, dependendo do alinhamento desejado */
+            gap: 10px; /* Espaçamento entre os ícones */
+        }
+        .loja-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #74e258; /* Azul, ajuste conforme necessário */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px; /* Deixa a borda arredondada */
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 15px; /* Ajuste a posição conforme necessário */
+            right: 100px;
+        }
+
+        .loja-btn:hover {
+            background-color: #26ff00; /* Cor mais escura no hover */
+            color: #eff7ed;
+        }
+
+            </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
 </head>
 <body>
     <nav>
@@ -188,6 +250,8 @@
             <a href="produtos.html">Produtos</a>
             <a href="historia.html">História</a>
             <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+            <r href="https://loja.kolplast.com.br/" class="loja-btn">Loja Virtual</r>
+
         </div>
         <!-- <div class="logo">
             <img src="img/logo.webp" >
@@ -225,7 +289,7 @@
     <div class="partner-section">
         <p>Não somos apenas mais um fornecedor, somos seus parceiros.</p>
         <p>Executamos a fabricação para que você possa se concentrar na inovação.</p>
-        <button class="btn-ver-produtos" onclick="window.location.href='produtos.html';">Ver Produtos</button>
+        <button class="btn-ver-produtos" onclick="window.location.href='https://loja.kolplast.com.br/';">Conheça nossa loja</button>
     </div>
     
     <div class="map-container">
@@ -245,10 +309,15 @@
                 <p><strong>Endereço:</strong></p>
                 <p>Estr. Col. Japonesa, 1130 - Jardim Santa Angelina, Campina Grande do Sul - PR, 83430-000</p>
             </div>
-            <div>
-                <p><strong>LinkedIn:</strong></p>
-                <p><a href="https://www.linkedin.com/company/euroflux" target="_blank" style="color: white; text-decoration: none;">EuroFlux no LinkedIn</a></p>
+            <div >
+                <p><strong>Redes Sociais:</strong></p>
+                <div class="social-icons">
+                <a href="https://www.facebook.com/seu_perfil" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/euroflux.hosp/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/company/euroflux" target="_blank" class="fa fa-linkedin"></a>
             </div>
+            </div>            
+
         </div>
         <p style="text-align: center; margin-top: 20px;">&copy; 2025 EuroFlux - Todos os direitos reservados.</p>
     </footer>

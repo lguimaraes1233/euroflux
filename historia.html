@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História - EuroFlux</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Alegreya:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -92,12 +91,54 @@
             font-size: 16px;
             margin-top: 50px;
         }
-    </style>
+        .fa {
+            padding: 3px;
+            font-size: 40px; /* Aumente esse valor para aumentar os ícones */
+            width: 60px; /* Ajuste a largura para manter a proporção */
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            /* border-radius: 50%; */
+            color: white;
+
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+
+        /* Cores específicas para cada rede social */
+        .fa-facebook {
+            background: transparent;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: transparent;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: transparent;
+            color: white;
+        }
+
+        /* Efeito de opacidade ao passar o mouse */
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: left; /* ou center, dependendo do alinhamento desejado */
+            gap: 10px; /* Espaçamento entre os ícones */
+        }
+
+        </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        EuroFlux
-    </header>
+
     <nav>
         <div class="menu">
             <a href="index.html" class="logo">
@@ -137,7 +178,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer class="footer" style="text-align: left">
         <div style="display: flex; justify-content: flex-start; text-align: left; max-width: 800px; margin: 0 auto;">
             <div style="margin-right: 50px;">
                 <p><strong>E-mails:</strong></p>
@@ -151,10 +192,15 @@
                 <p><strong>Endereço:</strong></p>
                 <p>Estr. Col. Japonesa, 1130 - Jardim Santa Angelina, Campina Grande do Sul - PR, 83430-000</p>
             </div>
-            <div>
-                <p><strong>LinkedIn:</strong></p>
-                <p><a href="https://www.linkedin.com/company/euroflux" target="_blank" style="color: white; text-decoration: none;">EuroFlux no LinkedIn</a></p>
+            <div >
+                <p><strong>Redes Sociais:</strong></p>
+                <div class="social-icons">
+                <a href="https://www.facebook.com/seu_perfil" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/euroflux.hosp/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/company/euroflux" target="_blank" class="fa fa-linkedin"></a>
             </div>
+            </div>            
+
         </div>
         <p style="text-align: center; margin-top: 20px;">&copy; 2025 EuroFlux - Todos os direitos reservados.</p>
     </footer>
