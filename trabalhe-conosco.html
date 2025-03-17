@@ -26,11 +26,13 @@
             display: flex;
             justify-content: space-between;
             align-items: left;
-            background-color: rgb(246, 255, 249);
+            /* background-color: rgb(246, 255, 249); */
+            background-color: rgb(255, 255, 255);
             /* background-color: rgb(255, 255, 255); */
             padding: 15px 10%;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .menu {
             display: flex;
             /* gap: 20px; */
@@ -48,11 +50,30 @@
             transition: 0.3s;
         }
         .menu a:hover {
-            color: rgb(150, 255, 206);
+            color: #74c69d;
             text-decoration: underline;
-        }
+        }        
         .logo img {
             height: 30px;
+        }
+        .loja-btn { 
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25a244; /* Azul, ajuste conforme necessário */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px; /* Deixa a borda arredondada */
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 15px; /* Ajuste a posição conforme necessário */
+            right: 100px;
+        }
+
+        .loja-btn:hover {
+            background-color: #4ad66d; /* Cor mais escura no hover */
+            color: #eff7ed;
         }
         .container {
             width: 50%;
@@ -99,7 +120,7 @@
             background-color: #065C50;
         }
         footer {
-            background-color: #087464;
+            background-color: #1b4332;
             color: white;
             text-align: center;
             padding: 20px;
@@ -107,6 +128,7 @@
             width: 100%;
             margin-top: 50px;
         }
+        /* Social */
         .fa {
             padding: 15px; /* Aumente esse valor para tornar o círculo maior */
             font-size: 1000px; /* Aumente esse valor para aumentar os ícones */
@@ -117,7 +139,7 @@
             margin: 5px 2px;
             border-radius: 50%; /* Garantir bordas arredondadas */
             display: inline-block; /* Para garantir que o ícone fique inline */
-            color: #087464;
+            color: #1b4332;
             background-color: #fff;
             line-height: 60px; /* Centraliza o ícone verticalmente */
         }
@@ -130,7 +152,7 @@
         .fa-facebook {
             align-items: center;
             background: white;
-            color: #087464;
+            color: #1b4332;
         }
 
         .fa-instagram {
@@ -144,7 +166,6 @@
             background: white;
             color: #087464;
         }
-
 
         /* Efeito de opacidade ao passar o mouse */
         .fa:hover {
@@ -169,30 +190,36 @@
             <a href="produtos.html">Produtos</a>
             <a href="historia.html">História</a>
             <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+            <r href="https://loja.euroflux.com.br/" class="loja-btn">Loja Virtual</r>
         </div>
         <!-- <div class="logo">
             <img src="img/logo.webp" >
         </div> -->
     </nav>
-    <div class="container">
-        <h2>Envie seu Currículo</h2>
-        <p>Preencha os campos abaixo e envie seu currículo para fazer parte da nossa equipe.</p>
-        <form action="enviar_curriculo.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <div class="section">
+        <div class="section-content">
+            <div class="container"> 
+                <h2>Envie seu Currículo</h2>
+                <p>Preencha os campos abaixo e envie seu currículo para fazer parte da nossa equipe.</p>
+                <form action="enviar_curriculo.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="curriculo">Anexe seu Currículo:</label>
+                        <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <button type="submit">Enviar Currículo</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-            </div>
-            <div class="form-group">
-                <label for="curriculo">Anexe seu Currículo:</label>
-                <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
-            </div>
-            <button type="submit">Enviar Currículo</button>
-        </form>
+        </div>
     </div>
+    
     <footer class="footer" style="text-align: left">
         <div style="display: flex; justify-content: flex-start; text-align: left; max-width: 800px; margin: 0 auto;">
             <div style="margin-right: 50px;">

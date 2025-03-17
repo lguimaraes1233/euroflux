@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos - EuroFlux</title>
     <style>
-        body {
+        html, body {
+            height: 100%;
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #F8F9FA;
             color: #333;
+            
         }
         header {
             background-color: #087464;
@@ -26,11 +27,13 @@
             display: flex;
             justify-content: space-between;
             align-items: left;
-            background-color: rgb(246, 255, 249);
+            /* background-color: rgb(246, 255, 249); */
+            background-color: rgb(255, 255, 255);
             /* background-color: rgb(255, 255, 255); */
             padding: 15px 10%;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .menu {
             display: flex;
             /* gap: 20px; */
@@ -48,9 +51,9 @@
             transition: 0.3s;
         }
         .menu a:hover {
-            color: rgb(150, 255, 206);
+            color: #74c69d;
             text-decoration: underline;
-        }
+        }        
         .logo img {
             height: 30px;
         }
@@ -79,7 +82,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            background-color: #F3BA1C;
+            background-color: #25a244;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -87,15 +90,16 @@
             font-weight: bold;
         }
         .product-card a:hover {
-            background-color: #d9a317;
+            background-color: #25a244;
         }
         .footer {
-            background-color: #087464;
+            background-color: #1b4332;
             color: white;
-            text-align: center;
+            text-align: left;
             padding: 20px;
             font-size: 16px;
             margin-top: 50px;
+            margin-left: 10px;
         }
         .fa {
             padding: 15px; /* Aumente esse valor para tornar o círculo maior */
@@ -134,13 +138,111 @@
             background: white;
             color: #087464;
         }
+        .com_margem{
+            /* border-radius: 50px; */
+            border-top-right-radius: 50px;
+            border-top-right-radius: 50px;
+            /* border-bottom-right-radius: 50px; */
+        }
+        .social-icons {
+            display: flex;
+            justify-content: left; /* ou center, dependendo do alinhamento desejado */
+            gap: 5px; /* Espaçamento entre os ícones */
+        }
+        .loja-btn { 
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25a244; /* Azul, ajuste conforme necessário */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px; /* Deixa a borda arredondada */
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 15px; /* Ajuste a posição conforme necessário */
+            right: 100px;
+        }
+
+        .loja-btn:hover {
+            background-color: #4ad66d; /* Cor mais escura no hover */
+            color: #eff7ed;
+        }
 
         .social-icons {
             display: flex;
             justify-content: left; /* ou center, dependendo do alinhamento desejado */
             gap: 10px; /* Espaçamento entre os ícones */
         }
+        .loja-btn { 
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25a244; /* Azul, ajuste conforme necessário */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px; /* Deixa a borda arredondada */
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 15px; /* Ajuste a posição conforme necessário */
+            right: 100px;
+        }
 
+        .loja-btn:hover {
+            background-color: #4ad66d; /* Cor mais escura no hover */
+            color: #eff7ed;
+        }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      /* background-color: white; */
+      background-color: #edfaef;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      max-width: 40%;
+      border-radius: 10px;
+    }
+
+    .modal-description {
+      max-width: 55%;
+      text-align: left;
+      color: #1b4332;
+      
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+    }
+    .color{
+        color: #1b4332;
+    }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -153,34 +255,72 @@
             <a href="produtos.html">Produtos</a>
             <a href="historia.html">História</a>
             <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+            <r href="https://loja.euroflux.com.br/" class="loja-btn">Loja Virtual</r>
         </div>
         <!-- <div class="logo">
             <img src="img/logo.webp" >
         </div> -->
     </nav>
-    <div class="container">
-        <h2>Nossos Produtos</h2>
-        <div class="grid">
-            <div class="product-card">
-                <img src="img\Produto - Lençou.webp" alt="Lençol de Papel">
-                <h3>Lençol de Papel Descartável</h3>
-                <p>Disponível nos modelos: Ecológico, Branco e Extra Branco.</p>
-                <a href="produto-detalhes.html">Ver Mais</a>
-            <!-- </div>
-            <div class="product-card">
-                <img src="produto2.jpg" alt="Máscara Cirúrgica">
-                <h3>Máscara Cirúrgica</h3>
-                <p>Alta proteção e conforto para profissionais de saúde.</p>
-                <a href="produto-detalhes.html">Ver Mais</a>
-            </div>
-            <div class="product-card">
-                <img src="produto3.jpg" alt="Luvas Descartáveis">
-                <h3>Luvas Descartáveis</h3>
-                <p>Segurança e higiene em todos os procedimentos.</p>
-                <a href="produto-detalhes.html">Ver Mais</a>
-            </div> -->
-        </div>
+    
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+    <div class="grid">
+      <div class="product-card">
+        <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
+        <h3>Lençol de Papel Descartável</h3>
+        <p>Disponível nos modelos: Ecológico, Branco e Extra Branco.</p>
+        <a href="#" id="verMaisBtn">Ver Mais</a>
+      </div> 
     </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
+      <div class="modal-description">
+        <h3 class="Color">Lençol de Papel Descartável</h3>
+        <ul>
+          <li>Prático</li>
+          <li>Econômico</li>
+          <li>Macio ao toque</li>
+          <li>Textura leve</li>
+        </ul>
+        <p class="Color">Lençol de papel descartável utilizado para higiene e proteção do paciente em cama, cobertura de colchão, maca ou mesa para exames, em procedimentos clínicos e laboratoriais, ambientes médicos, hospitalar, onde a segurança e o conforto do usuário são imprescindíveis.</p>
+        <p class="Color"><strong>Bobinas:</strong><br>
+        50 cm ou 70 cm<br>
+        com 50 metros</p>
+        <p class="Color"><strong>Modelos:</strong></p>
+        <ul>
+          <li>Ecológico - fibras 100% Naturais</li>
+          <li>Branco - fibras 100% Celulósicas Naturais</li>
+          <li>Extra Branco - fibras 100% Celulósicas Virgens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("productModal");
+    const btn = document.getElementById("verMaisBtn");
+    const closeBtn = document.getElementById("closeModal");
+
+    btn.onclick = function (e) {
+      e.preventDefault();
+      modal.style.display = "block";
+    };
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
     <footer class="footer" style="text-align: left">
         <div style="display: flex; justify-content: flex-start; text-align: left; max-width: 800px; margin: 0 auto;">
             <div style="margin-right: 50px;">
