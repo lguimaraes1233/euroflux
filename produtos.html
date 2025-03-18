@@ -31,9 +31,9 @@
             background-color: rgb(255, 255, 255);
             /* background-color: rgb(255, 255, 255); */
             padding: 15px 10%;
+            padding-left: 7px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .menu {
             display: flex;
             /* gap: 20px; */
@@ -53,7 +53,7 @@
         .menu a:hover {
             color: #74c69d;
             text-decoration: underline;
-        }        
+        }   
         .logo img {
             height: 30px;
         }
@@ -249,78 +249,117 @@
 <body>
     <nav>
         <div class="menu">
-            <a href="index.html" class="logo">
-                <img src="img/logo.webp" >
-            </a>
-            <a href="produtos.html">Produtos</a>
-            <a href="historia.html">História</a>
-            <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
-            <r href="https://loja.euroflux.com.br/" class="loja-btn">Loja Virtual</r>
-        </div>
-        <!-- <div class="logo">
+          <a href="index.html" class="logo">
             <img src="img/logo.webp" >
-        </div> -->
-    </nav>
+          </a>
+          <a href="produtos.html">Produtos</a>
+          <a href="historia.html">História</a>
+          <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+          <r href="https://loja.euroflux.com.br/" class="loja-btn">Loja Virtual</r>
+        </div>
+      </nav>
+      <div class="container">
+        <h2>Nossos Produtos</h2>
+        <div class="grid">
+          <!-- Primeiro produto -->
+          <div class="product-card">
+            <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
+            <h3>Lençol de Papel Descartável</h3>
+            <p>Disponível nos modelos: Ecológico, Branco e Extra Branco.</p>
+            <a href="#" id="verMaisBtn1">Ver Mais</a>
+          </div> 
     
-  <div class="container">
-    <h2>Nossos Produtos</h2>
-    <div class="grid">
-      <div class="product-card">
-        <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
-        <h3>Lençol de Papel Descartável</h3>
-        <p>Disponível nos modelos: Ecológico, Branco e Extra Branco.</p>
-        <a href="#" id="verMaisBtn">Ver Mais</a>
-      </div> 
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" id="closeModal">&times;</span>
-      <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
-      <div class="modal-description">
-        <h3 class="Color">Lençol de Papel Descartável</h3>
-        <ul>
-          <li>Prático</li>
-          <li>Econômico</li>
-          <li>Macio ao toque</li>
-          <li>Textura leve</li>
-        </ul>
-        <p class="Color">Lençol de papel descartável utilizado para higiene e proteção do paciente em cama, cobertura de colchão, maca ou mesa para exames, em procedimentos clínicos e laboratoriais, ambientes médicos, hospitalar, onde a segurança e o conforto do usuário são imprescindíveis.</p>
-        <p class="Color"><strong>Bobinas:</strong><br>
-        50 cm ou 70 cm<br>
-        com 50 metros</p>
-        <p class="Color"><strong>Modelos:</strong></p>
-        <ul>
-          <li>Ecológico - fibras 100% Naturais</li>
-          <li>Branco - fibras 100% Celulósicas Naturais</li>
-          <li>Extra Branco - fibras 100% Celulósicas Virgens</li>
-        </ul>
+          <!-- Segundo produto -->
+          <div class="product-card">
+            <br><br><br>
+            <img src="img/embalagem_estrelização.png" alt="Embalagem estrelização">
+            <br><br><br><br><br>
+            <h3>Embalagem estrelização</h3>
+            <p>Alta absorção e maciez. Ideal para ambientes clínicos e estéticos.</p>
+            <a href="#" id="verMaisBtn2">Ver Mais</a>
+          </div> 
+        </div>
       </div>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("productModal");
-    const btn = document.getElementById("verMaisBtn");
-    const closeBtn = document.getElementById("closeModal");
-
-    btn.onclick = function (e) {
-      e.preventDefault();
-      modal.style.display = "block";
-    };
-
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
+    
+      <!-- Modal Produto 1 -->
+      <div id="productModal1" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal1">&times;</span>
+          <img src="img/Produto - Lençou.png" alt="Lençol de Papel">
+          <div class="modal-description">
+            <h3 class="color">Lençol de Papel Descartável</h3>
+            <ul>
+              <li>Prático</li>
+              <li>Econômico</li>
+              <li>Macio ao toque</li>
+              <li>Textura leve</li>
+              <p class="Color">Lençol de papel descartável utilizado para higiene e proteção do paciente em cama, cobertura de colchão, maca ou mesa para exames, em procedimentos clínicos e laboratoriais, ambientes médicos, hospitalar, onde a segurança e o conforto do usuário são imprescindíveis.</p>
+              <p class="Color"><strong>Bobinas:</strong><br>
+                50 cm ou 70 cm<br>
+                com 50 metros</p>
+                <p class="Color"><strong>Modelos:</strong></p>
+                <ul>
+                <li>Ecológico - fibras 100% Naturais</li>
+                <li>Branco - fibras 100% Celulósicas Naturais</li>
+                <li>Extra Branco - fibras 100% Celulósicas Virgens</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Produto 2 -->
+      <div id="productModal2" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal2">&times;</span>
+          <img src="img/embalagem_estrelização.png" alt="Embalagem estrelização">
+          <div class="modal-description">
+            <h3 class="color">Toalha de Papel Descartável</h3>
+            <ul>
+              <li>Alta absorção</li>
+              <li>Toque macio</li>
+              <li>Resistente</li>
+              <li>Disponível em diversas gramaturas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        // Modal Produto 1
+        var modal1 = document.getElementById("productModal1");
+        var btn1 = document.getElementById("verMaisBtn1");
+        var span1 = document.getElementById("closeModal1");
+    
+        btn1.onclick = function() {
+          modal1.style.display = "block";
+        }
+        span1.onclick = function() {
+          modal1.style.display = "none";
+        }
+    
+        // Modal Produto 2
+        var modal2 = document.getElementById("productModal2");
+        var btn2 = document.getElementById("verMaisBtn2");
+        var span2 = document.getElementById("closeModal2");
+    
+        btn2.onclick = function() {
+          modal2.style.display = "block";
+        }
+        span2.onclick = function() {
+          modal2.style.display = "none";
+        }
+    
+        // Fechar modal clicando fora
+        window.onclick = function(event) {
+          if (event.target == modal1) {
+            modal1.style.display = "none";
+          }
+          if (event.target == modal2) {
+            modal2.style.display = "none";
+          }
+        }
+      </script>
     <footer class="footer" style="text-align: left">
         <div style="display: flex; justify-content: flex-start; text-align: left; max-width: 800px; margin: 0 auto;">
             <div style="margin-right: 50px;">
